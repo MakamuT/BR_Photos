@@ -1,0 +1,49 @@
+@import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
+/*universal styles*/
+body{
+    background-color: #f5efeb;
+}
+h1{
+    color: #7696d1;
+    font-size: 40px;
+}
+/*header styles*/
+button{
+    align-self: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    margin-left: -75px;
+    margin-top: -95px;
+    width: 20rem;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+.dropdown{
+    display: inline-block;
+}
+.dropdown a{
+    color: black;
+    display: block;
+    padding: 10px 15px; 
+    text-decoration: none;
+}
+.dropdown .item{
+    background-color: #7696d1;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0.8);
+    display: none;
+    min-width: 150px;
+    position: absolute;
+}
+.dropdown:hover .item{
+    display: block;
+}
+.dropdown::hover button{
+    scale: 1;
+}
+.dropdown a::hover{
+    background-color: #7696d1;
+}
