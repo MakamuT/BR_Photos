@@ -1,0 +1,110 @@
+@import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
+body{
+    background-color: #f5efeb;
+}
+header{
+    background-color: #7696d1;
+    color: #f5efeb;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+h1{
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+}
+header .fa-solid{
+    color: #f2f0de;
+    font-size: 1.5em;
+    margin-top: 40px;
+}
+.container{
+    background: #f5f5f5;
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #dbdbdb;
+    height: 580px;
+    position: relative;
+    width: 800px;
+}
+.container .slide .item{
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 20px;
+    box-shadow: 0 9px 10px #505050;
+    display: inline-block;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: .5s;
+    width: 165px;
+}
+.container .slide .item:nth-child(1), .container .slide .item:nth-child(2){
+    border-radius: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+    width: 100%;
+}
+.slide .item:nth-child(3){
+    left: 50%;
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 210px);
+}
+.slide .item:nth-child(5){
+    left: calc(50% + 420px);
+}
+.slide .item:nth-child(n + 6){
+    left: calc(50% + 650px);
+    opacity: 0;
+}
+@keyframes animate{
+    from{
+        filter: blur(33px);
+        opacity: 0;
+        transiform: translate(0, 100px)
+    }
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translate(0);
+    }
+}
+.btn{
+    bottom: 20px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.btn button{
+    background-color: #7696d1;
+    border: 1px solid #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 35px;
+    margin: 0 5px;
+    transition: .3s;
+    width: 40px;
+}
+.btn button:hover{
+    background-color: #f5efeb;
+    color: #7696d1;
+}
+@media screen and (max-width: 600px){
+    .container{
+        height: 350px;
+        width: 400px;
+    }
+    .container .slide .item{
+        height: 200px;
+        width: 130px;
+    }
+    .container .slide .item:nth-child(4){
+        left: calc(50% + 180px);
+    }
+}
