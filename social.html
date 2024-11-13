@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortraitsandHeadshots</title>
+    <title>Social Events</title>
     <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
+    <header>
+        <a href="index.html"><i class="fa-solid fa-house"></i></a>
+        <h1>Social Events</h1>
+        <a href="product.html"><i class="fa-solid fa-arrow-circle-right"></i></a>
+    </header>
     <div class="container">
         <div class="slide">
-            <div class="item" style="background-image: url();">
-                <div class="content">
-                    <button>See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url();"></div>
-             <div class="item" style="background-image: url();"></div>
-            <div class="item" style="background-image: url();"></div>
-            <div class="item" style="background-image: url();"></div>
+            <div class="item" style="background-image: url(img/events/IMG_0634-3-70.jpg);"></div>
+            <div class="item" style="background-image: url(img/events/e1.jpg);"></div>
+             <div class="item" style="background-image: url(img/events/e4.jpg);"></div>
+            <div class="item" style="background-image: url(img/events/IMG_0498-1-1.jpg);"></div>
+            <div class="item" style="background-image: url(img/events/IMG_0609-28-62.jpg);"></div>
         </div>
         <div class="btn">
             <button class="prev">
@@ -31,4 +32,18 @@
         </div>
     </div>
 </body>
+<script>
+    const $next = document.querySelector('.next');
+    const $prev = document.querySelector('.prev');
+
+    $next.addEventListener('click', () => {
+        const $items = document.querySelectorAll('.item');
+        document.querySelector('.slide').appendChild($items[0]);
+    });
+
+    $prev.addEventListener('click', () => {
+        const $items = document.querySelectorAll('.item');
+        document.querySelector('.slide').prepend($items[$items.length - 1]);
+    });
+</script>
 </html>

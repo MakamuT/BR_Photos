@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortraitsandHeadshots</title>
+    <title>Birthday</title>
     <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
+    <header>
+        <a href="index.html"><i class="fa-solid fa-house"></i></a>
+        <h1>Birthday</h1>
+        <a href="social.html"><i class="fa-solid fa-arrow-circle-right"></i></a>
+    </header>
     <div class="container">
         <div class="slide">
-            <div class="item" style="background-image: url();">
-                <div class="content">
-                    <button>See More</button>
-                </div>
-            </div>
+            <div class="item" style="background-image: url();"></div>
             <div class="item" style="background-image: url();"></div>
              <div class="item" style="background-image: url();"></div>
             <div class="item" style="background-image: url();"></div>
@@ -31,4 +32,18 @@
         </div>
     </div>
 </body>
+<script>
+    const $next = document.querySelector('.next');
+    const $prev = document.querySelector('.prev');
+
+    $next.addEventListener('click', () => {
+        const $items = document.querySelectorAll('.item');
+        document.querySelector('.slide').appendChild($items[0]);
+    });
+
+    $prev.addEventListener('click', () => {
+        const $items = document.querySelectorAll('.item');
+        document.querySelector('.slide').prepend($items[$items.length - 1]);
+    });
+</script>
 </html>

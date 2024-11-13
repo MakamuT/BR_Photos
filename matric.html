@@ -16,8 +16,8 @@
         <div class="slide">
             <div class="item" style="background-image: url(img/matric/m1.jpg);"></div>
             <div class="item" style="background-image: url(img/matric/m2.jpg);"></div>
-             <div class="item" style="background-image: url(img/matric/m3.jpg);"></div>
-            <div class="item" style="background-image: url(img/matric/mr4.jpg);"></div>
+            <div class="item" style="background-image: url(img/matric/m3.jpg);"></div>
+            <div class="item" style="background-image: url(img/matric/m4.jpg);"></div>
             <div class="item" style="background-image: url(img/matric/m6.jpg);"></div>
         </div>
         <div class="btn">
@@ -32,4 +32,18 @@
         </div>
     </div>
 </body>
+<script>
+    const $next = document.querySelector('.next');
+    const $prev = document.querySelector('.prev');
+
+    $next.addEventListener('click', () => {
+        const $items = document.querySelectorAll('.item');
+        document.querySelector('.slide').appendChild($items[0]);
+    });
+
+    $prev.addEventListener('click', () => {
+        const $items = document.querySelectorAll('.item');
+        document.querySelector('.slide').prepend($items[$items.length - 1]);
+    });
+</script>
 </html>

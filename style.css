@@ -8,15 +8,27 @@ h1{
     font-size: 40px;
 }
 /*header styles*/
+header{
+    display: flex;
+    flex-directions: row;
+    justify-content: space-evenly;
+}
+.logo{
+    margin-left: -15rem;
+    margin-top: -6.5rem;
+    height: 20rem;
+    width: 20rem;
+}
 button{
-    align-self: center;
+    align-self: flex-end;
     background-color: transparent;
     border: none;
+    color: #7696d1;
     cursor: pointer;
     display: inline;
+    font-size: 30px;
     margin-left: -75px;
-    margin-top: -95px;
-    width: 20rem;
+    margin-top: 2rem;
 }
 img{
     height: 100%;
@@ -28,13 +40,16 @@ img{
 .dropdown a{
     color: black;
     display: block;
+    font-size: 20px;
     padding: 10px 15px; 
     text-decoration: none;
 }
 .dropdown .item{
     background-color: #7696d1;
+    border-radius: 20px;
     box-shadow: 2px 2px 5px hsla(0, 0%, 0.8);
     display: none;
+    margin-left: -10rem;
     min-width: 150px;
     position: absolute;
 }
@@ -42,8 +57,8 @@ img{
     display: block;
 }
 .dropdown::hover button{
-    scale: 1;
+    rotate: 90deg;
 }
-.dropdown a::hover{
-    background-color: #7696d1;
+.dropdown::hover a{
+    color: #f5efeb;
 }
