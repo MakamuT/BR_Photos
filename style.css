@@ -127,13 +127,13 @@ img {
   opacity: 0;
   z-index: 5;
 }
-@media (min-width: 380px) {
+@media (max-width: 780px) {
   .container {
-    width: 75vw;
+    width: 60vw;
     height: 50vh;
   }
   .box {
-    width: 75vw;
+    width: 60vw;
     height: 50vh;
   }
   img{
