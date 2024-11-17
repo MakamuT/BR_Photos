@@ -27,5 +27,39 @@
         </div>
     </div>
 </header>
+<section id="home">
+    <div class="container">
+      <div class="box">
+        <img src="img/IMG_0712-22-89.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="img/matric/m2.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="img/events/e4.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="img/portrait/pr3.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="img/product/p1.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="img/SHAKE X LES LAST LAST/IMG_0516-8-8.jpg" alt="" />
+      </div>
+      <div class="box">
+        <img src="img/SHAKE X LES LAST LAST/IMG_0522-11-11.jpg" alt="" />
+      </div>
+    </div>
+    </section>
 </body>
+<script>
+    const $container = document.querySelector(".container");
+
+    setInterval(() => {
+      const $last = $container.firstElementChild;
+      $last.remove();
+      $container.appendChild($last);
+    }, 1000);
+  </script>
 </html>
