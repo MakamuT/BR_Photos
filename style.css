@@ -130,11 +130,11 @@ img {
 @media (max-width: 780px) {
   .container {
     width: 60vw;
-    height: 50vh;
+    height: 60vh;
   }
   .box {
     width: 60vw;
-    height: 50vh;
+    height: 60vh;
   }
   img{
     height: 100%;
