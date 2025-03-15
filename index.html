@@ -7,54 +7,129 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <div class="logo">
-        <img src="img/bgimg.png">
+  <nav>
+    <div class="navheader">
+      <div class="navlogo">
+        <a href="">
+          <img src="img/bgimg.png" alt="">
+        </a>
+      </div>
+    <div class="navmenu-btn" id="menu-btn">
+      <i class="fa-solid fa-bars"></i>
     </div>
-    <div class="dropdown">
-        <button>
-            <i class="fa-solid fa-folder-open"></i>
-        </button>
-        <div class="item">
-            <a href="portraits.html">Portfolio</a>
-            <a href="matric.html">Contact</a>
-            <a href="wedding.html">Prices</a>
-        </div>
     </div>
-</header>
-<section id="home">
-    <div class="container">
-      <div class="box">
-        <img src="img/IMG_0712-22-89.jpg" alt="" />
-      </div>
-      <div class="box">
-        <img src="img/SHAKE X LES LAST LAST/IMG_0521-10-10.jpg" alt="" />
-      </div>
-      <div class="box">
-        <img src="img/SHAKE X LES LAST LAST/IMG_0523-12-12.jpg" alt="" />
-      </div>
-      <div class="box">
-        <img src="img/SHAKE X LES LAST LAST/IMG_0527-14-14.jpg" alt="" />
-      </div>
-      <div class="box">
-        <img src="img/SHAKE X LES LAST LAST/IMG_0530-16-16.jpg" alt="" />
-      </div>
-      <div class="box">
-        <img src="img/SHAKE X LES LAST LAST/IMG_0516-8-8.jpg" alt="" />
-      </div>
-      <div class="box">
-        <img src="img/SHAKE X LES LAST LAST/IMG_0522-11-11.jpg" alt="" />
-      </div>
-    </div>
-    </section>
-</body>
-<script>
-    const $container = document.querySelector(".container");
+     <ul class="navlinks" id="navlinks">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Portfolio</a></li>
+        <li><a href="">Contact details</a></li>
+      </ul>
+  </nav>
 
-    setInterval(() => {
-      const $last = $container.firstElementChild;
-      $last.remove();
-      $container.appendChild($last);
-    }, 1000);
+  <header id="home">
+    <div class="section_container header_container">
+      <div class="header_image">
+        <img src="img/portrait/pr1.jpg" alt="">
+      </div>
+      <div class="header_content">
+        <h1>Photography</h1>
+        <h2>Johannesburg, SA</h2>
+        <div class="header_btn">
+          <button class="btn">HIRE ME</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section_container about_container" id="about">
+    <div class="about_image">
+      <img src="img/IMG_0712-22-89.jpg" alt="">
+    </div>
+    <div class="about_content">
+      <h2 class="section_header">About Me</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores magnam placeat deleniti rem fuga at exercitationem, excepturi cum totam ipsam incidunt aliquid voluptate officiis, molestiae iusto error? Quia, voluptatibus voluptas.</p>
+      <div class="about_btn">
+        <button class="btn">VIEW MY WORK</button>
+      </div>
+    </div>
+  </section>
+  <section class="section_container portfolio_container" id="portfolio">
+    <h2 class="section_header">Portfolio</h2>
+    <div class="portfolio_grid">
+      <div>
+        <img src="img/events/IMG_0634-3-70.jpg" alt="">
+        <img src="img/product/decor1.jpg" alt="">
+        <img src="img/matric/m3.jpg" alt="">
+        <img src="img/SHAKE X LES LAST LAST/IMG_0763-21-116.jpg" alt="">
+      </div>
+         <div>
+        <img src="img/events/e1.jpg" alt="">
+        <img src="img/product/decor2.jpg" alt="">
+        <img src="img/events/e3.jpg" alt="">
+        <img src="img/matric/m2.jpg" alt="">
+      </div>
+      <div>
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('navlinks');
+    const menuBtnIcon = menuBtn.querySelector('i');
+
+    menuBtn.addEventListener("click", (e) => {
+      navLinks.classList.toggle("open");
+
+    const isOpen = navLinks.classList.contains("open");
+    menuBtnIcon.setAttribute("class", isOpen ? "fas fa-times" : "fas fa-bars");
+  });
+    navLinks.addEventListener("click", (e) => {
+    navLinks.classList.remove("open");
+    menuBtnIcon.setAttribute("class", "fas fa-bars");
+})
+  const scrollRevealOption = {
+    distance: '50px',
+    origin: 'bottom',
+    duration: 1000,
+  };
+
+  ScrollReveal().reveal('.header_image img', {
+    ...scrollRevealOption,
+    origin: 'right',
+  });
+  ScrollReveal().reveal('.header_content h1', {
+    ...scrollRevealOption,
+    delay: 500,
+  });
+  ScrollReveal().reveal('.header_content h2', {
+    ...scrollRevealOption,
+    delay: 1000,
+  });
+  ScrollReveal().reveal('.header_btn', {
+    ...scrollRevealOption,
+    delay: 1500,
+  });
+   ScrollReveal().reveal('.about_image img', {
+    ...scrollRevealOption,
+    origin: 'left',
+  });
+  ScrollReveal().reveal('.about_content .section_header', {
+    ...scrollRevealOption,
+    delay: 500,
+  });
+  ScrollReveal().reveal('.about_content p', {
+    ...scrollRevealOption,
+    delay: 1000,
+    interval: 500,
+  });
+  ScrollReveal().reveal('.about_btn', {
+    ...scrollRevealOption,
+    delay: 2000,
+  });
   </script>
+</body>
 </html>
