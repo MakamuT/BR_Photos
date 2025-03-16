@@ -194,14 +194,14 @@ nav{
  
 }
 .footer_socials a{
-  border-radius: 100%;
-  color: #e9a752;
+  border-radius: 90%;
+  color: #e8d3c1;
   font-size: 1.75rem;
   padding: 5px 9px;
 }
 .footer_socials a:hover{
-  background-color: #e9a752;
-  color: #4B494D;
+  background-color: #e8d3c1;
+  color: #2f80e4;
 }
 .footer_bar{
   color: white;
