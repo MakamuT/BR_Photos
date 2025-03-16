@@ -1,4 +1,5 @@
 @import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 /*universal styles*/
 *{
   box-sizing: border-box;
@@ -11,6 +12,7 @@ html, body{
 body{
     background-color: #4B494D;
     color: #eae2e4;
+    font-family: "Nunito", sans-serif;
 }
 .section_container{
   margin: auto;
@@ -120,6 +122,8 @@ nav{
 }
 .header_content h1{
   color: #2f80e4;
+  font-family: "Laila", serif;
+  font-weight: 700;
   font-size: 3.5rem;
   font-weight: 800;
   text-align: center;
